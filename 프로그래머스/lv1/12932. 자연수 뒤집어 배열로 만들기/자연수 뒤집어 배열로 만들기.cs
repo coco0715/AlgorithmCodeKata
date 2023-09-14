@@ -4,16 +4,20 @@ using System.Linq;
 public class Solution {
     public int[] solution(long n)
     {
-    string str = n.ToString();
-    int[] answer = new int[str.Length];
+        string strN = n.ToString();
+        char[] charArr = strN.ToCharArray();
+        string[] strArr = new string[charArr.Length];
 
-    for (int i = 0; i < str.Length; i++)
-    {
-        answer[i] = int.Parse(str[i].ToString());
-    }
-    
-    Array.Reverse(answer);
+        Array.Sort(charArr);
+        Array.Reverse(charArr);
+  
+        for (int i = 0; i < charArr.Length; i++)
+        {
+            strArr[i] = charArr[i].ToString();
+        }
 
-    return answer;
+        int[] answer = Array.ConvertAll(strArr, a => int.Parse(a));
+
+        return answer;
     }
 }
