@@ -1,2 +1,2 @@
 # AlgorithmCodeKata
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+## 매일하는 알고리즘 학습
